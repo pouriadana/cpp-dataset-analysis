@@ -2,3 +2,4 @@ Imdb Movie Dataset.csv
 *.exe
 *.o
 *.out
+title.basics.tsv

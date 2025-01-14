@@ -6,10 +6,11 @@
 #include <sstream>
 #include <fstream>
 
-std::vector<std::vector<std::string>> read_csv(std::fstream& in)
+std::vector<std::vector<std::string>> read_csv(const std::string& fname)
 // read a comma seperated line into a 2d vector with type std::string
 {
     // std::cout << "Inside function\n";
+    std::fstream in{fname};
     std::string s;
     std::vector<std::vector<std::string>> out;
     while (std::getline(in, s)) {
@@ -46,5 +47,12 @@ std::vector<std::vector<std::string>> read_csv(std::fstream& in)
     }
     return out;
 } 
+
+std::vector<std::string> get_features(const std::string& fname)
+// given a .csv file, extract its features and return as
+// a list/vector of string
+{
+    return read_csv(fname)[0];
+}
 
 #endif

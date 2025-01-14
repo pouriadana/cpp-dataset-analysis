@@ -6,7 +6,6 @@
 #include "headers/helperfunc.h"
 
 /* Symbolic constants */
-#define MAX_COLS 50
 
 int main()
 {

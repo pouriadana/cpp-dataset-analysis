@@ -16,7 +16,6 @@ std::vector<std::vector<std::string>> read_csv(std::fstream& in)
         std::vector<std::string> temp_v;
         std::stringstream line(s);
         std::string word;
-        bool dquote = false;
         // std::cout << "Inside while loop\n";
         for (int i = 0; i < s.size(); ++i) {
             // std::cout << "Inside for loop\n";
